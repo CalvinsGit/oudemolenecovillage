@@ -17,30 +17,47 @@
     padding: 0;
 }
 
+/* Update the body to push content down so the absolute nav doesn't cover it */
 body {
     font-family: 'Inter', sans-serif;
     background-color: var(--bg-page);
     color: var(--text-main);
     line-height: 1.7;
     -webkit-font-smoothing: antialiased;
+    padding-top: 80px; /* Added to account for absolute nav */
 }
 
-/* Modern Sticky Navigation */
-nav {
+/* --- Desktop Navigation (Absolute Position) --- */
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     background-color: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
-    padding: 1rem;
-    text-align: center;
-    position: sticky;
-    top: 0;
+    padding: 1rem 2rem;
     z-index: 1000;
     box-shadow: 0 1px 3px rgba(0,0,0,0.05);
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Centers links on desktop */
+    align-items: center;
+}
+
+.hamburger {
+    display: none; /* Hidden on desktop screens */
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    cursor: pointer;
+    padding: 5px;
+}
+
+.nav-links {
+    display: flex;
     gap: 10px;
 }
 
-nav a {
+.nav-links a {
     color: var(--text-muted);
     text-decoration: none;
     padding: 8px 16px;
@@ -50,7 +67,7 @@ nav a {
     transition: all 0.2s ease;
 }
 
-nav a:hover, nav a:active {
+.nav-links a:hover, .nav-links a:active {
     background-color: #f1f5f9;
     color: var(--primary-color);
 }
@@ -271,5 +288,208 @@ p {
     }
     .legend-box ul {
         column-count: 1;
+    }
+}
+
+/* fundraiser.css */
+
+/* Override the default container padding to allow the black banner to stretch edge-to-edge */
+.container.home {
+    padding-top: 0;
+    overflow: hidden;
+}
+
+/* Main Black Banner Section */
+.fundraiser-banner {
+    background-color: #000000;
+    color: #ffffff;
+    display: flex;
+    padding: 40px;
+    align-items: center;
+    margin: 0 -50px;
+}
+
+.banner-image-col {
+    flex: 1;
+    max-width: 45%;
+}
+
+.banner-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.banner-content-col {
+    flex: 1.5;
+    padding-left: 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.banner-logo {
+    width: 100px;
+    height: auto;
+    margin: 0 auto 20px;
+}
+
+.banner-title {
+    color: #ff0000;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.banner-details p {
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+    color: #ffffff;
+}
+
+.banner-list {
+    margin: 25px 0;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+/* Text Highlights */
+.red-highlight {
+    color: #ff0000;
+    font-weight: 700;
+}
+
+.yellow-highlight {
+    background-color: #ffff00;
+    color: #000000;
+    padding: 4px 8px;
+    font-weight: 700;
+    border-radius: 4px;
+}
+
+/* Lower Content Section Padding */
+.content-padding {
+    padding: 50px;
+}
+
+/* Footer Logos */
+.footer-logos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 2px solid var(--border-soft, #e2e8f0);
+}
+
+.footer-logo-img {
+    height: 70px;
+    width: auto;
+}
+
+/* Mobile Responsiveness for Fundraiser Page */
+@media (max-width: 768px) {
+    .fundraiser-banner {
+        flex-direction: column;
+        padding: 30px 20px;
+    }
+    
+    .fundraiser-banner .banner-image-col img {
+        max-height: 280px;
+    }
+
+    
+    .banner-image-col {
+        max-width: 80%;
+        margin-bottom: 30px;
+    }
+    
+    .banner-content-col {
+        padding-left: 0;
+    }
+    
+    .banner-title {
+        font-size: 1.8rem;
+    }
+    
+    .content-padding {
+        padding: 30px 20px;
+    }
+    
+    .footer-logos {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+/* Download Button */
+.btn-container {
+    text-align: center;
+    margin: 40px 0 20px; /* Adds breathing room around the button */
+}
+
+.btn-download {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: #ffffff;
+    padding: 14px 32px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(234, 88, 12, 0.25); /* Soft glowing orange shadow */
+    transition: all 0.2s ease;
+    border: 2px solid var(--accent-color);
+}
+
+.btn-download:hover {
+    background-color: #c2410c; /* Slightly darker shade on hover */
+    border-color: #c2410c;
+    box-shadow: 0 6px 15px rgba(234, 88, 12, 0.35);
+    transform: translateY(-2px); /* Lifts the button slightly when hovered */
+    color: #ffffff;
+}
+
+.btn-download:active {
+    transform: translateY(0); /* Pushes the button down when clicked */
+}
+
+/* --- Mobile Hamburger Menu --- */
+@media (max-width: 768px) {
+    .navbar {
+        justify-content: flex-end; /* Pushes the burger icon to the right */
+        padding: 1rem 20px;
+    }
+
+    .hamburger {
+        display: block; /* Shows the button on mobile */
+    }
+
+    .nav-links {
+        display: none; /* Hidden by default on mobile */
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-card);
+        padding: 15px;
+        box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+        border-top: 1px solid var(--border-soft);
+        gap: 5px;
+    }
+
+    /* This class is added by the JavaScript when clicked */
+    .nav-links.show {
+        display: flex; 
+    }
+
+    .nav-links a {
+        width: 100%;
+        text-align: left;
+        padding: 12px 16px;
+        border-radius: 6px;
     }
 }

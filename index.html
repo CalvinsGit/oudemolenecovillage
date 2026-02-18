@@ -3,66 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>What's On - Oude Molen</title>
+    <title>Fire Horse Fundraiser - Oude Molen</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav>
-        <a href="index.html">What's On</a>
-        <a href="map.html">Map</a>
-        <a href="donate.html">Donate</a>
-        <a href="cost.html">Cost</a>
+    <nav class="navbar">
+        <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+                <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+            </svg>
+        </button>
+        
+        <div class="nav-links" id="nav-links">
+            <a href="index.html">Home</a>
+            <a href="whats-on.html">What's On</a>
+            <a href="map.html">Map</a>
+            <a href="donate.html">Donate</a>
+            <a href="pony-rides.html">Pony Rides</a>
+            <a href="tribute.html">Tribute to the Horse</a>
+        </div>
     </nav>
 
-    <div class="container">
-        <header class="page-header">
-            <img src="horse-left.png" alt="Flaming Horse Logo">
-            <div>
-                <h1>What's On?</h1>
-                <p class="header-subtitle">Saturday 28 February '26</p>
+    <div class="container home">
+        <div class="fundraiser-banner">
+            <div class="banner-image-col">
+                <img src="front-horse.png" alt="Flaming Horse" class="banner-image">
             </div>
-            <img src="horse-right.png" alt="Flaming Horse Logo">
-        </header>
-
-        <h2>12 to 6 p.m.</h2>
-        <p><span class="bold">R40</span> to bring your meat and use fires, which will be set up at the RiverLodge Backpackers open area. If you choose, your meat will be braaied for you. Seating available for you to lay out crockery, cutlery and salads. Note: a separate braai will be set up outside this area for Halaal.</p>
-        <p>Pool tables available at R5 per game.</p>
-        <p><span class="bold accent-text">PLEASE NOTE</span> – drinks to be purchased from the bar at RiverLodge – those using the braai area must please not bring drinks in with them.</p>
-
-        <h2>1 to 6 p.m.</h2>
-        <p class="bold">R50 for a 2 minute ride on the Mechanical Bull</p>
-
-        <h2>12.30 to 5 p.m.</h2>
-        <ul>
-            <li>Organic produce, plants, herbs, seeds, honey, chilli paste, snacks, jams and other for sale at Oude Molen Food Garden.</li>
-            <li>Eclectic mix of arts and fashion on display/for sale at The Yellow House.</li>
-            <li>Crafts, gifts, horse photos and horse-lover items for sale within open area at RiverLodge.</li>
-        </ul>
-
-        <h2>All day to 5 p.m.</h2>
-        <p>Pony rides and outrides (see pricing below)</p>
-
-        <h2 class="accent-text">6.15 p.m. / to end the Day</h2>
-        <ul>
-            <li>Gather at the top of the Wetlands</li>
-            <li>Tribute to the Horse will be read</li>
-            <li>Running of the horses, led by Kendre Allies</li>
-        </ul>
-        
-        <div class="badge-container">
-            <div class="badge">Boerewors Rolls on sale at <span class="bold">R30</span> each</div>
-        </div>
-        <div class="badge-container">
-            <div class="badge">
-                <span class="bold">Cash and Card payments</span><br>
-                <small>Tickets on sale for some activities</small>
+            <div class="banner-content-col">
+                <img src="oude-molen.png" alt="Oude Molen Stables Logo" class="banner-logo">
+                <p>Please join us at our</p>
+                <h1 class="banner-title">Fire Horse Fundraiser</h1>
+                <div class="banner-details">
+                    <p>When : Saturday 28 February</p>
+                    <p>Time : 12 p.m. to 6+ p.m.</p>
+                    <p>Where : Oude Molen Eco Village</p>
+                </div>
+                <div class="banner-list">
+                    Braai and bar area; Pool tables;<br>
+                    <span class="red-highlight">Mechanical bull</span>; Plants, seeds,<br>
+                    condiments, honey; Art and Fashion;<br>
+                    Equine photography; Horse crafts;<br>
+                    Pony Rides – ending the day with...
+                </div>
+                <h2 class="banner-title" style="margin-bottom: 0;">“RUNNING of the HORSES”</h2>
             </div>
         </div>
 
-        <div class="contact-info">
-            <p>Contact with queries: <a href="mailto:oudemolenstables@gmail.com" style="color: var(--accent-color); text-decoration: none;">oudemolenstables@gmail.com</a></p>
-        </div>
+        <div class="content-padding">
+            <p><span class="bold">2025</span> was the “year of the Snake” - representing renewal and shedding of old habits for growth. Also referred to as ‘the little Dragon’.</p>
+            <p><span class="bold">2026</span> is the “year of the Fire Horse” - representing intense, dynamic energy, symbolising boldness, freedom, independence and transformation.</p>
+            <p>It's a time for swift, decisive action, innovation and breaking of old patterns.</p>
+            <p>It is fitting that in the <span class="red-highlight">year of the Fire Horse</span>, we are raising funds for our cherished horse friends and their needs.</p>
 
+            <p style="margin-top: 30px;">
+                <span class="yellow-highlight">see below for:</span>
+            </p>
+            <ul style="list-style-type: none; padding-left: 10px;">
+                <li><a href="whats-on.html" >What’s on? – activities with times and prices where available</a></li>
+                <li><a href="map.html">Map – showing where parking area, ticket sales and activities are located</a></li>
+                <li><a href="donate.html">Wish list – what items can be donated</a></li>
+                <li><a href="tribute.html">Tribute – poem to be read before “Running of the Horses”</a></li>
+                <li><a href="pony-rides.html">Pony rides – duration and prices</a></li>
+            </ul>
+            <div class="btn-container">
+                <a href="Fire Horse Fundraiser - PDF.pdf" download target="_blank" class="btn-download">Download Event Guide</a>
+            </div>
+            <div class="footer-logos">
+                <img src="riverlodge.png" alt="Riverlodge Backpackers" class="footer-logo-img">
+                
+                <div class="text-center">
+                    <p class="bold" style="margin-bottom: 5px;">Contact with queries :</p>
+                    <a href="mailto:oudemolenstables@gmail.com" style="color: var(--accent-color); text-decoration: none;">oudemolenstables@gmail.com</a>
+                </div>
+                
+                <img src="food-garden.png" alt="Oude Molen Food Garden & Nursery" class="footer-logo-img">
+            </div>
+        </div>
     </div>
+    <script>
+        document.getElementById('hamburger').addEventListener('click', function() {
+            document.getElementById('nav-links').classList.toggle('show');
+        });
+    </script>
 </body>
 </html>

@@ -7,37 +7,38 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav>
-        <a href="index.html">What's On</a>
-        <a href="map.html">Map</a>
-        <a href="donate.html">Donate</a>
-        <a href="cost.html">Cost</a>
+    <nav class="navbar">
+        <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+                <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+            </svg>
+        </button>
+        
+        <div class="nav-links" id="nav-links">
+            <a href="index.html">Home</a>
+            <a href="whats-on.html">What's On</a>
+            <a href="map.html">Map</a>
+            <a href="donate.html">Donate</a>
+            <a href="pony-rides.html">Pony Rides</a>
+            <a href="tribute.html">Tribute to the Horse</a>
+        </div>
     </nav>
 
     <div class="container">
         <header class="page-header">
-            <img src="horse-left.png" alt="Flaming Horse Logo">
+            <img src="side-raised-horse.png" alt="Flaming Horse Logo" style="min-width: 150px;">
             <div>
                 <h1>MAP</h1>
                 <p class="header-subtitle">Oude Molen Eco Village<br>Alexandra Road, Pinelands, 7405</p>
             </div>
-            <img src="horse-right.png" alt="Flaming Horse Logo">
+            <img src="side-raised-horse.png" alt="Flaming Horse Logo" style="transform: rotateY(180deg); min-width: 150px;">
         </header>
 
-        <div class="legend-box">
-            <ul>
-                <li><strong>A</strong> Entrance</li>
-                <li><strong>B</strong> Parking</li>
-                <li><strong>C</strong> Pony Rides</li>
-                <li><strong>D</strong> Mechanical Bull, Ticket Sales</li>
-                <li><strong>E</strong> Braai Area, Bar, Stalls</li>
-                <li><strong>F</strong> Yellow House</li>
-                <li><strong>G</strong> Oude Molen Food Garden</li>
-                <li><strong>H</strong> Jonno's Play Park</li>
-            </ul>
-        </div>
+        <a href="map.png" target="_blank" download="true"><img src="map.png" alt="Map of Oude Molen Eco Village" class="map-image"></a>
+    </div>
 
-        <img src="map-image.jpg" alt="Map of Oude Molen Eco Village" class="map-image">
+    <div class="btn-container">
+        <a href="Fire Horse Fundraiser - PDF.pdf" download target="_blank" class="btn-download">Download Event Guide</a>
     </div>
 </body>
 </html>
