@@ -3,183 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern HTML Demo Page</title>
-    <style>
-        /* CSS VARIABLES: Easy color management */
-        :root {
-            --primary-color: #6366f1; /* Indigo */
-            --bg-color: #ffffff;
-            --text-color: #333333;
-            --card-bg: #f3f4f6;
-            --nav-height: 70px;
-        }
-
-        /* DARK MODE VARIABLES */
-        body.dark-mode {
-            --bg-color: #111827;
-            --text-color: #f3f4f6;
-            --card-bg: #1f2937;
-        }
-
-        /* GLOBAL STYLES */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: system-ui, -apple-system, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            transition: background-color 0.3s, color 0.3s;
-            line-height: 1.6;
-        }
-
-        /* NAVIGATION */
-        nav {
-            height: var(--nav-height);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 2rem;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        .logo {
-            font-weight: bold;
-            font-size: 1.5rem;
-            color: var(--primary-color);
-        }
-
-        button.toggle-btn {
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            border: 2px solid var(--primary-color);
-            background: transparent;
-            color: var(--text-color);
-            cursor: pointer;
-            font-weight: bold;
-        }
-
-        button.toggle-btn:hover {
-            background: var(--primary-color);
-            color: white;
-        }
-
-        /* HERO SECTION */
-        .hero {
-            text-align: center;
-            padding: 5rem 1rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .hero p {
-            font-size: 1.25rem;
-            margin-bottom: 2rem;
-            opacity: 0.8;
-        }
-
-        .cta-button {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 8px;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: transform 0.2s;
-        }
-
-        .cta-button:active {
-            transform: scale(0.95);
-        }
-
-        /* FEATURES GRID */
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            padding: 4rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .card {
-            background-color: var(--card-bg);
-            padding: 2rem;
-            border-radius: 12px;
-            text-align: left;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        }
-
-        .card h3 {
-            margin-bottom: 0.5rem;
-            color: var(--primary-color);
-        }
-
-        /* FOOTER */
-        footer {
-            text-align: center;
-            padding: 2rem;
-            margin-top: 2rem;
-            opacity: 0.6;
-            font-size: 0.9rem;
-        }
-    </style>
+    <title>What's On - Oude Molen</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <nav>
-        <div class="logo">DemoSite</div>
-        <button class="toggle-btn" onclick="toggleTheme()">Toggle Dark Mode</button>
+        <a href="index.html">What's On</a>
+        <a href="map.html">Map</a>
+        <a href="donate.html">Donate</a>
+        <a href="cost.html">Cost</a>
     </nav>
 
-    <main class="hero">
-        <h1>Hello, World!</h1>
-        <p>This is a demo page generated to show you how HTML, CSS, and JavaScript work together in a single file.</p>
-        <button class="cta-button" onclick="interact()">Click Me!</button>
-        <p id="interaction-text" style="margin-top: 1rem; font-size: 0.9rem; color: var(--primary-color);"></p>
-    </main>
+    <div class="container">
+        <header class="page-header">
+            <img src="horse-left.png" alt="Flaming Horse Logo">
+            <div>
+                <h1>What's On?</h1>
+                <p class="header-subtitle">Saturday 28 February '26</p>
+            </div>
+            <img src="horse-right.png" alt="Flaming Horse Logo">
+        </header>
 
-    <section class="features">
-        <div class="card">
-            <h3>Structure</h3>
-            <p>HTML provides the skeleton of the page. It uses semantic tags like header, main, and section.</p>
+        <h2>12 to 6 p.m.</h2>
+        <p><span class="bold">R40</span> to bring your meat and use fires, which will be set up at the RiverLodge Backpackers open area. If you choose, your meat will be braaied for you. Seating available for you to lay out crockery, cutlery and salads. Note: a separate braai will be set up outside this area for Halaal.</p>
+        <p>Pool tables available at R5 per game.</p>
+        <p><span class="bold accent-text">PLEASE NOTE</span> – drinks to be purchased from the bar at RiverLodge – those using the braai area must please not bring drinks in with them.</p>
+
+        <h2>1 to 6 p.m.</h2>
+        <p class="bold">R50 for a 2 minute ride on the Mechanical Bull</p>
+
+        <h2>12.30 to 5 p.m.</h2>
+        <ul>
+            <li>Organic produce, plants, herbs, seeds, honey, chilli paste, snacks, jams and other for sale at Oude Molen Food Garden.</li>
+            <li>Eclectic mix of arts and fashion on display/for sale at The Yellow House.</li>
+            <li>Crafts, gifts, horse photos and horse-lover items for sale within open area at RiverLodge.</li>
+        </ul>
+
+        <h2>All day to 5 p.m.</h2>
+        <p>Pony rides and outrides (see pricing below)</p>
+
+        <h2 class="accent-text">6.15 p.m. / to end the Day</h2>
+        <ul>
+            <li>Gather at the top of the Wetlands</li>
+            <li>Tribute to the Horse will be read</li>
+            <li>Running of the horses, led by Kendre Allies</li>
+        </ul>
+        
+        <div class="badge-container">
+            <div class="badge">Boerewors Rolls on sale at <span class="bold">R30</span> each</div>
         </div>
-        <div class="card">
-            <h3>Style</h3>
-            <p>CSS makes it look good. We used CSS Variables for easy color theming and Grid for layout.</p>
+        <div class="badge-container">
+            <div class="badge">
+                <span class="bold">Cash and Card payments</span><br>
+                <small>Tickets on sale for some activities</small>
+            </div>
         </div>
-        <div class="card">
-            <h3>Logic</h3>
-            <p>JavaScript handles the behavior. Try the buttons on this page to see DOM manipulation in action.</p>
+
+        <div class="contact-info">
+            <p>Contact with queries: <a href="mailto:oudemolenstables@gmail.com" style="color: var(--accent-color); text-decoration: none;">oudemolenstables@gmail.com</a></p>
         </div>
-    </section>
 
-    <footer>
-        <p>&copy; 2024 Generated by Gemini. Feel free to use this code!</p>
-    </footer>
-
-    <script>
-        // Function to toggle Dark Mode
-        function toggleTheme() {
-            document.body.classList.toggle('dark-mode');
-        }
-
-        // Function for the Hero Button
-        let count = 0;
-        function interact() {
-            count++;
-            const textElement = document.getElementById('interaction-text');
-            textElement.textContent = `You have clicked the button ${count} time(s)!`;
-        }
-    </script>
+    </div>
 </body>
 </html>
