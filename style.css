@@ -424,6 +424,12 @@ p {
     }
 }
 
+@media screen and (max-width:600px) {
+    .desktop-only {
+        display: none;
+    }
+}
+
 /* Download Button */
 .btn-container {
     text-align: center;
